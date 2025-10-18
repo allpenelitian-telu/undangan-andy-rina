@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan Andy & Rina</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+  :root {
+    --primary-color: #9C7A56;
+    --secondary-color: #F5F4F1;
+    --text-dark: #3A2C1B;
+    --text-light: #fff;
+    --accent-color: #C2A78C;
+    --background-accent: #D8CBB8;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    text-align: center;
+    overflow-x: hidden;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    line-height: 1.5;
+  }
+
+  /* HEADER */
+  /* HEADER */
+.header {
+  background: linear-gradient(rgba(156, 122, 86, 0.7), rgba(156, 122, 86, 0.7)),
+              url('https://raw.githubusercontent.com/allpenelitian-telu/undangan-andy-rina/refs/heads/main/background.jpeg') center center no-repeat;
+  background-size: cover;
+  color: var(--text-light);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5vw;
+  text-align: center;
+  border-bottom: 4px solid var(--accent-color);
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Saat layar sangat lebar (desktop besar), tampilkan seluruh gambar */
+@media (min-width: 1200px) {
+  .header {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    min-height: 100vh;
+  }
+}
+
+/* Saat layar menengah (tablet/medium desktop) */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .header {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+/* Saat layar kecil (HP) tetap fill penuh */
+@media (max-width: 899px) {
+  .header {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+
+  .header h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: clamp(1rem, 3.5vw, 1.4rem);
+    margin-bottom: 0.5em;
+  }
+
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 8vw, 3.5rem);
+    margin: 0;
+    letter-spacing: 2px;
+  }
+
+  .header p {
+    font-style: italic;
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+    max-width: 700px;
+    margin: 0.8em auto;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* SECTION */
+  .section {
+    padding: 40px 5vw;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 900px;
+    animation: fadeIn 1s ease-out;
+  }
+
+  .section h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+  }
+
+  .section p {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+  }
+
+  /* COUNTDOWN */
+  .countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .countdown-box {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-radius: 6px;
+    padding: 10px 12px;
+    width: clamp(60px, 15vw, 90px);
+  }
+
+  .countdown-box span {
+    font-size: clamp(1.2rem, 5vw, 2rem);
+    font-family: 'Playfair Display', serif;
+    display: block;
+  }
+
+  .countdown-box small {
+    font-size: clamp(0.6rem, 2vw, 0.8rem);
+    text-transform: uppercase;
+  }
+
+  /* MAP */
+  .map-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  /* TABLE REKENING */
+  .rekening-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  }
+
+  .rekening-table th, .rekening-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+    word-break: break-word;
+  }
+
+  .rekening-table th {
+    background: var(--background-accent);
+    color: var(--text-dark);
+  }
+
+  .copy-button {
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+
+  .copy-button:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+  }
+
+  /* FOOTER */
+  .footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 40px 20px;
+    margin-top: 20px;
+  }
+
+  .footer .signature {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    color: var(--accent-color);
+  }
+
+  /* MUSIC BUTTON */
+  .music-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 50%;
+    width: clamp(45px, 12vw, 55px);
+    height: clamp(45px, 12vw, 55px);
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    font-size: clamp(1rem, 4vw, 1.2em);
+    transition: transform 0.3s, background-color 0.3s;
+    z-index: 100;
+  }
+
+  .music-control:hover {
+    transform: scale(1.1);
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+  }
+
+  /* RESPONSIVE BREAKPOINTS */
+  @media (max-width: 768px) {
+    .section {
+      padding: 30px 4vw;
+    }
+
+    .rekening-table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .header {
+      min-height: auto;
+      padding: 80px 5vw;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header {
+      padding: 60px 5vw;
+    }
+    .section {
+      padding: 25px 5vw;
+    }
+    .footer {
+      padding: 30px 15px;
+    }
+  }
+</style>
+
+</head>
+
+<body>
+  <!-- Musik -->
+  <audio id="bg-music" loop autoplay>
+    <source src="https://github.com/allpenelitian-telu/undangan-andy-rina/raw/refs/heads/main/sad-piano-love-story-71443.mp3" type="audio/mpeg">
+  </audio>
+  <button class="music-control" onclick="toggleMusic()">🎵</button>
+
+  <!-- HEADER -->
+  <div class="header">
+    <h2>The Wedding of</h2>
+    <h1>Andy & Rina</h1>
+    <p>
+      "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri,
+      supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang."
+      <br>(QS. Ar-Rum: 21)
+    </p>
+    <p><b>Kepada Yth. Bapak/Ibu/Saudara/i</b><br>Kami mengundang Anda untuk menjadi bagian dari hari bahagia kami.</p>
+  </div>
+
+  <!-- COUNTDOWN -->
+  <div class="section countdown-section">
+    <h3>Menghitung Hari Menuju Hari Bahagia Kami</h3>
+    <p style="font-weight:bold; color:var(--primary-color);">20 November 2025</p>
+    <div class="countdown-timer" id="countdown">
+      <div class="countdown-box"><span id="days">00</span><small>Hari</small></div>
+      <div class="countdown-box"><span id="hours">00</span><small>Jam</small></div>
+      <div class="countdown-box"><span id="minutes">00</span><small>Menit</small></div>
+      <div class="countdown-box"><span id="seconds">00</span><small>Detik</small></div>
+    </div>
+  </div>
+
+  <!-- VENUE -->
+  <div class="section venue-section">
+    <h3>Intimate Wedding Ceremony</h3>
+    <p>
+      Kami memutuskan untuk merayakan hari istimewa kami dalam suasana yang <b>intimate</b> dan hangat, 
+      hanya dihadiri oleh keluarga terdekat dan sahabat.
+    </p>
+    <p><strong>Masjid Raya Al Jabbar</strong><br>Jl. Cimincrang No.14, Gedebage, Bandung</p>
+    <p><strong>Tanggal:</strong> Rabu, 20 November 2025<br><strong>Waktu Akad:</strong> 07.00 - 09.00 WIB</p>
+
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.5175184362793!2d107.70092627499669!3d-6.94811449305206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c38b3b833aaf%3A0xfa194c3af7525217!2sMasjid%20Raya%20Al%20Jabbar!5e0!3m2!1sen!2sid!4v1760754740272!5m2!1sen!2sid" 
+        allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <a href="https://maps.app.goo.gl/6bDuSuzhRcQuon3K7" target="_blank" style="display:inline-block;margin-top:20px;background:var(--primary-color);color:#fff;padding:10px 20px;border-radius:5px;text-decoration:none;">📍 Lihat di Google Maps</a>
+  </div>
+
+  <!-- DUKUNGAN -->
+  <div class="section support-section">
+    <h3>Doa Restu & Dukungan</h3>
+    <p>
+      Tiada hadiah terindah yang dapat kami terima selain kehadiran dan doa restu Anda.
+      Bagi Bapak/Ibu/Saudara/i yang ingin memberikan doa restu secara material, dapat disalurkan melalui rekening berikut:
+    </p>
+    <table class="rekening-table">
+      <thead>
+        <tr><th>Bank</th><th>No. Rekening</th><th>A.N.</th><th>Aksi</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>GoPay / LinkAja / E-Money</td>
+          <td id="rek-bri">082129141468</td>
+          <td>Musrinah</td>
+          <td><button class="copy-button" onclick="copyToClipboard('rek-bri', this)">Salin</button></td>
+        </tr>
+        <tr>
+          <td>BCA</td>
+          <td id="rek-bca">1100519379</td>
+          <td>Andy Maulana Yusuf</td>
+          <td><button class="copy-button" onclick="copyToClipboard('rek-bca', this)">Salin</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:20px;font-style:italic;">Kami ucapkan terima kasih atas kebaikan hati Anda.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <h3>See You Soon!</h3>
+    <p>Merupakan kehormatan bagi kami apabila Anda berkenan hadir dan memberikan doa restu.</p>
+    <div class="signature">Andy & Rina</div>
+  </div>
+
+  <script>
+    /* Countdown */
+    const countDownDate = new Date("Nov 20, 2025 09:00:00").getTime();
+    const x = setInterval(() => {
+      const now = new Date().getTime();
+      const dist = countDownDate - now;
+      const d = Math.floor(dist / (1000 * 60 * 60 * 24));
+      const h = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((dist % (1000 * 60)) / 1000);
+      document.getElementById("days").innerText = d.toString().padStart(2,'0');
+      document.getElementById("hours").innerText = h.toString().padStart(2,'0');
+      document.getElementById("minutes").innerText = m.toString().padStart(2,'0');
+      document.getElementById("seconds").innerText = s.toString().padStart(2,'0');
+      if (dist < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "<span style='color:var(--accent-color);font-weight:bold;'>🎉 ACARA TELAH USAI 🎉</span>";
+      }
+    }, 1000);
+
+    /* Copy Button */
+    function copyToClipboard(id, btn) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const old = btn.innerText;
+        btn.innerText = "Tersalin!";
+        btn.style.backgroundColor = "#4CAF50";
+        setTimeout(() => {
+          btn.innerText = old;
+          btn.style.backgroundColor = "var(--accent-color)";
+        }, 1500);
+      });
+    }
+  </script>
+  <script>
+  const music = document.getElementById('bg-music');
+  let isPlaying = false;
+  let hasInteracted = false;
+
+  // Fungsi untuk memulai musik
+  function startMusic() {
+    if (!isPlaying) {
+      music.play().then(() => {
+        isPlaying = true;
+        document.querySelector('.music-control').innerText = '🎵';
+        console.log("Musik diputar otomatis setelah klik pertama");
+      }).catch(err => {
+        console.log("Autoplay diblokir:", err);
+      });
+    }
+  }
+
+  // Jalankan musik saat user pertama kali menyentuh layar
+  document.addEventListener('click', () => {
+    if (!hasInteracted) {
+      startMusic();
+      hasInteracted = true;
+    }
+  });
+
+  // Fungsi tombol manual tetap aktif
+  function toggleMusic() {
+    if (isPlaying) {
+      music.pause();
+      document.querySelector('.music-control').innerText = '🔇';
+    } else {
+      music.play();
+      document.querySelector('.music-control').innerText = '🎵';
+    }
+    isPlaying = !isPlaying;
+  }
+</script>
+</body>
+</html>
